@@ -1,0 +1,41 @@
+{
+  "name": "back",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored",
+    "dev": "ts-node-dev src/index.ts",
+    "devbuild": "nodemon dist/index.js",
+    "start": "node dist/index.js",
+    "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@types/puppeteer-core": "^2.0.0",
+    "@babel/core": "^7.11.1",
+    "@babel/node": "^7.10.5",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-typescript": "^7.10.4",
+    "@types/cors": "^2.8.7",
+    "@types/dotenv": "^8.2.0",
+    "@types/express": "^4.17.7",
+    "@types/jquery": "^3.5.1",
+    "@types/node": "^14.0.27",
+    "babel-plugin-module-resolver": "^4.0.0",
+    "ts-node-dev": "^1.0.0-pre.56",
+    "typescript": "^3.9.7"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jquery": "^3.5.1",
+    "pg": "^8.3.0",
+    "puppeteer-core": "^5.2.1",
+    "reflect-metadata": "^0.1.13",
+    "typeorm": "^0.2.25"
+  }
+}
